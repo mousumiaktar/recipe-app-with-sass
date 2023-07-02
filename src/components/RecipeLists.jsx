@@ -6,19 +6,20 @@ function RecipeLists() {
 
     const [searchedTearm, setSearchedTearm] = useState('')
     const [query, setQuery] = useState('pizza')
-    const [data, setData] = useState('');
+    const [data, setData] = useState(null);
 
     const searchrecipe = (searchQuery) => {
-        fetchData(searchQuery).then((response) => {
-            setData(response)
-            // props.setLoader(false)
+        fetchData(searchQuery)
+        .then((response) => {
+            setData(response);
+            console.log(response)
         })
     }
 
     useEffect(() => {
         fetchData(query).then((response) => {
             setData(response)
-            // props.setLoader(false)
+            console.log(response)
         })
     }, [])
 
@@ -36,7 +37,7 @@ function RecipeLists() {
                         value={searchedTearm}
                         type="text" 
                         placeholder='Search your recipe...' />
-                    <button onClick={() => (searchrecipe(searchedTearm),(true))} ><BsSearch /></button>
+                    <button onClick={() => (searchrecipe(searchedTearm) )} ><BsSearch /></button>
                 </div>
             </div>
             <div className='flexbox'>

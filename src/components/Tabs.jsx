@@ -1,29 +1,55 @@
+import { useState } from 'react'
 import {CiPizza} from 'react-icons/ci'
 import {GiFruitBowl , GiNoodles,GiCheckMark} from 'react-icons/gi'
 import {MdOutlineIcecream} from 'react-icons/md'
+import { fetchTabData } from '../service'
 
 function Tabs() {
+    const [active,setActive] = useState('Pizza');
+    const [tabData,setTabData] = useState('')
+    const [tabLabel, setTablabel] = useState([
+
+        {
+            name: 'pizza',
+            icons:<CiPizza />,
+            id:'0209cb28fc05320434e2916988f47b71'
+        },
+        {
+            name: 'Noodles',
+            icons:<GiNoodles />,
+            id:'0209cb28fc05320434e2916988f47b71'
+        },
+        {
+            name: 'Desert',
+            icons:<GiFruitBowl />,
+            id:'0209cb28fc05320434e2916988f47b71'
+        },
+        {
+            name: 'Icecream',
+            icons:<MdOutlineIcecream />,
+            id:'0209cb28fc05320434e2916988f47b71'
+        }
+
+    ]);
+
+    const handleClick = (name,id) => {
+        setActive(name)
+        fetchTabData(id).then((response)=> {
+            setTabData(response);
+            // props.setLoader(false)
+        })
+    }
     
     return (
         <div className="container">
         <h1 className='recipeHeading'>What would you like to have!</h1>
         <div className="tabs">
-                <div className="tablist active">
-                    <CiPizza />
-                    <span>Pizza</span>
+        {tabLabel.map((item,index)=> (
+                <div onClick={() => (handleClick(item.name,item.id))} key={index} className={`tablist ${active === item.name ? 'active':""}`}>
+                    {item.icons}
+                    <span>{item.name}</span>
                 </div>
-                <div className="tablist">
-                    <GiNoodles />
-                    <span>Noodles</span>
-                </div>
-                <div className="tablist">
-                    <GiFruitBowl />
-                    <span>Desert</span>
-                </div>
-                <div className="tablist">
-                    <MdOutlineIcecream />
-                    <span>ice cream</span>
-                </div>
+            ))}
             
         </div>
         <div className='recipe_banner'>
