@@ -3,8 +3,13 @@ import { CiPizza } from 'react-icons/ci'
 import { GiFruitBowl, GiNoodles, GiCheckMark } from 'react-icons/gi'
 import { MdOutlineIcecream } from 'react-icons/md'
 import { fetchTabData } from '../service'
+import PropTypes from 'prop-types';
 
-function Tabs() {
+function Tabs(props) {
+
+    Tabs.propTypes = {
+        setLoader: PropTypes.func.isRequired,
+      };
     const [active, setActive] = useState('Pizza');
     const [tabData, setTabData] = useState('')
     const [tabLabel, setTablabel] = useState([
@@ -36,13 +41,14 @@ function Tabs() {
         setActive(name)
         fetchTabData(id).then((response) => {
             setTabData(response);
-            // props.setLoader(false)
+            props.setLoader(false)
         })
     }
 
     useEffect(() => {
         fetchTabData(tabLabel[0].id).then((response) => {
             setTabData(response);
+            props.setLoader(false)
         })
     }, []);
 
@@ -51,7 +57,7 @@ function Tabs() {
             <h1 className='recipeHeading'>What would you like to have!</h1>
             <div className="tabs">
                 {tabLabel.map((item, index) => (
-                    <div onClick={() => (handleClick(item.name, item.id))} key={index} className={`tablist ${active === item.name ? 'active' : ""}`}>
+                    <div onClick={() => (handleClick(item.name, item.id,props.setLoader(true)))} key={index} className={`tablist ${active === item.name ? 'active' : ""}`}>
                         {item.icons}
                         <span>{item.name}</span>
                     </div>
