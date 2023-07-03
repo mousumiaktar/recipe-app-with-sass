@@ -52,7 +52,7 @@ function RecipeLists(props) {
                             <div className='img-wrapper'>
                                 <img src={item.recipe.image} alt={item.recipe.label} />
                             </div>
-                            <p>{item.recipe.label}</p>
+                            <p style={{color:"green"}}>{item.recipe.label}</p>
                         </div>
                     ))
                 }

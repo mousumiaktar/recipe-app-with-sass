@@ -48,7 +48,6 @@ function Tabs(props) {
     useEffect(() => {
         fetchTabData(tabLabel[0].id).then((response) => {
             setTabData(response);
-            console.log(response);
             props.setLoader(false)
         })
     }, []);
@@ -70,12 +69,12 @@ function Tabs(props) {
                 <div className="left-col">
                     <span className='badge'>{tabData.recipe?.cuisineType[0].toUpperCase()}</span>
                     <h1>{tabData.recipe.label}</h1>
-                    <p><strong>Recipe by:</strong><small>{tabData.recipe.source}</small></p>
+                    <p><strong>Recipe by:</strong><small style={{color:"red"}}>{tabData.recipe.source}</small></p>
                     <h3>Ingredients</h3>
                     <div className='ingredients'>
                         <ul>
                             {tabData.recipe.ingredientLines.map((list,index)=> 
-                                (<li key={index}><GiCheckMark size="18px" color="#6fcb9f" />&nbsp;<span>{list}</span></li>)
+                                (<li key={index}><GiCheckMark size="18px" color="#008000" />&nbsp;<span>{list}</span></li>)
                             )}
                             
                         </ul>
