@@ -2,7 +2,7 @@ import {ImSpoonKnife} from 'react-icons/im'
 
 const Header = () => {
     return (
-      <header className='header' style={{ backgroundImage: `url(https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)` }}>
+      <header className='header' style={{ backgroundImage: `url(https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-fashion-food-poster-background-image_159294.jpg)` }}>
       <div className='layer'>
       <div className="container">
         <nav className='logo-wrapper'>

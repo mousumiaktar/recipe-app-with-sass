@@ -17,22 +17,22 @@ function Tabs(props) {
         {
             name: 'pizza',
             icons: <CiPizza />,
-            id: '0209cb28fc05320434e2916988f47b71'
+            id: '687b61a316de39be04b86911cff4dfe6'
         },
         {
             name: 'Noodles',
             icons: <GiNoodles />,
-            id: 'a243e3cd56da95b31e5a86ef52578908'
+            id: '77c41731c83b90e9800fc7189595494d'
         },
         {
             name: 'Desert',
             icons: <GiFruitBowl />,
-            id: 'bc865476ffe2b8a03fbe9aee2f739740'
+            id: '3e7100af0c44d5af24bb27e247c49f22'
         },
         {
             name: 'Icecream',
             icons: <MdOutlineIcecream />,
-            id: '7c5a5ced83523b4dc49adbc78471cc38'
+            id: 'fcdefc1ab687dcd2e88b2fe92a370b78'
         }
 
     ]);
@@ -48,6 +48,7 @@ function Tabs(props) {
     useEffect(() => {
         fetchTabData(tabLabel[0].id).then((response) => {
             setTabData(response);
+            console.log(response);
             props.setLoader(false)
         })
     }, []);
