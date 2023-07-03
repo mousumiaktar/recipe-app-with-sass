@@ -16,6 +16,7 @@ function App() {
         setLoader={setLoader}
       />
       <RecipeLists
+        setLoader={setLoader}
       />
 
       {loader && <div className='loader'>

@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { fetchData } from '../service';
+import PropTypes from 'prop-types';
 
-function RecipeLists() {
+function RecipeLists(props) {
+
+    RecipeLists.propTypes = {
+        setLoader: PropTypes.func.isRequired,
+      };
 
     const [searchedTearm, setSearchedTearm] = useState('')
     const [query, setQuery] = useState('pizza')
@@ -12,14 +17,14 @@ function RecipeLists() {
         fetchData(searchQuery)
         .then((response) => {
             setData(response);
-            console.log(response)
+            props.setLoader(false)
         })
     }
 
     useEffect(() => {
         fetchData(query).then((response) => {
             setData(response)
-            console.log(response)
+            props.setLoader(false)
         })
     }, [])
 
@@ -37,7 +42,7 @@ function RecipeLists() {
                         value={searchedTearm}
                         type="text" 
                         placeholder='Search your recipe...' />
-                    <button onClick={() => (searchrecipe(searchedTearm) )} ><BsSearch /></button>
+                    <button onClick={() => (searchrecipe(searchedTearm),props.setLoader(true) )} ><BsSearch /></button>
                 </div>
             </div>
             <div className='flexbox'>
