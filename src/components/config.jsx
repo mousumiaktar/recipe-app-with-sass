@@ -1,2 +1,2 @@
-export const REACT_APP_APP_ID = '000f51f4';
-export const REACT_APP_APP_KEY = 'bec8be9872556363dde722389916e23f';
+export const REACT_APP_APP_ID = 'ea8a35b4';
+export const REACT_APP_APP_KEY = '56b09823e04045b663443621d9014218';
