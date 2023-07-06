@@ -398,6 +398,10 @@ p {
 .footer-area{
   background-color: hsl(151, 74%, 45%);
 }
+.footer-body{
+  display: flex;
+  justify-content: space-between;
+}
 
 
 .loader {

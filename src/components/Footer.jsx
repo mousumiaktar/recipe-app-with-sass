@@ -4,9 +4,15 @@ const Footer = () => {
     return (
         <div className="footer-area">
             <div className="container">
-                <div>
+                <div className="footer-body">
                     <div className='logo'>
                         <ImSpoonKnife className='brand' />
+                    </div>
+                    <div className="popular-recipe">
+                        <p>Popular Recipe</p>
+                        <p><small>Pizza</small></p>
+                        <p><small>Burger</small></p>
+                        <p><small>Noodles</small></p>
                     </div>
                     <div className="contact">
                         <p>Contact</p>
