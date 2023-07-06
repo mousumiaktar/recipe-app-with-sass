@@ -5,8 +5,8 @@ const Footer = () => {
         <div className="footer-area">
             <div className="container">
                 <div className="footer-body">
-                    <div className='logo'>
-                        <ImSpoonKnife className='brand' />
+                    <div className='footer-content'>
+                        <img  src="https://cdn.vectorstock.com/i/preview-1x/67/14/pharmacy-bio-and-naturel-recipe-logo-design-vector-25516714.jpg" alt="" />
                     </div>
                     <div className="popular-recipe">
                         <p>Popular Recipe</p>

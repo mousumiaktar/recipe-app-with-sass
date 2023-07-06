@@ -401,7 +401,15 @@ p {
 .footer-body{
   display: flex;
   justify-content: space-between;
+  justify-items: center;
+  padding-top: 15px;
+
+  .footer-content img{
+    height: 100px;
+  }
 }
+
+
 
 
 .loader {
