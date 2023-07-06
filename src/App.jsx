@@ -5,6 +5,7 @@ import Tabs from "./components/Tabs"
 
 import './App.scss'
 import { useState } from "react"
+import Footer from "./components/Footer"
 function App() {
 
   const [loader, setLoader] = useState(true)
@@ -18,6 +19,7 @@ function App() {
       <RecipeLists
         setLoader={setLoader}
       />
+      <Footer />
 
       {loader && <div className='loader'>
         <div className='spinner'></div>
