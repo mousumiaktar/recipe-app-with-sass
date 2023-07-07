@@ -404,9 +404,11 @@ p {
   justify-content: space-between;
   padding-top: 15px;
 
+
   .footer-flex {
     flex: 1 0 25%; /* Displays four columns on desktop */
     margin-bottom: 20px;
+    line-height: 30px;
   
     @media (max-width: 768px) {
       flex-basis: 100%; /* Displays one column on mobile */

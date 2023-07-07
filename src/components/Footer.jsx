@@ -1,5 +1,3 @@
-import { ImSpoonKnife } from "react-icons/im";
-
 const Footer = () => {
     return (
         <div className="footer-area">
@@ -9,19 +7,19 @@ const Footer = () => {
                         <img  src="https://i.ibb.co/k4VP74Y/download.jpg" alt="" />
                     </div>
                     <div className="footer-flex">
-                        <p>Popular Recipe</p>
+                        <p><u>Popular Recipe</u></p>
                         <p><small>Pizza</small></p>
                         <p><small>Burger</small></p>
                         <p><small>Noodles</small></p>
                     </div>
                     <div className="footer-flex">
-                        <p>Contact</p>
+                        <p><u>Contact</u></p>
                         <p><small>Phone: 01799999999</small></p>
                         <p><small>Whatsapp: 01799999999</small></p>
                         <p><small>Email: recipe@gmail.com</small></p>
                     </div>
                     <div className="footer-flex">
-                        <p>Recipe</p>
+                        <p><u>Recipe</u></p>
                         <p><small>Pizza</small></p>
                         <p><small>Burger</small></p>
                         <p><small>Noodles</small></p>
