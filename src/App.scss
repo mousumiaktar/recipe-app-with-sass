@@ -400,13 +400,25 @@ p {
 }
 .footer-body{
   display: flex;
-  flex-flow: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 15px;
 
+  .footer-flex {
+    flex: 1 0 25%; /* Displays four columns on desktop */
+    margin-bottom: 20px;
+  
+    @media (max-width: 768px) {
+      flex-basis: 100%; /* Displays one column on mobile */
+    }
+  
+    p {
+      margin: 0;
+    }
+  }
+  
   .footer-flex img{
     height: 100px;
-    background-color: hsl(151, 74%, 45%);
   }
 }
 
