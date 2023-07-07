@@ -4,7 +4,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-body">
                     <div className='footer-flex'>
-                        <img  src="https://i.ibb.co/k4VP74Y/download.jpg" alt="" />
+                        <img  src="https://i.ibb.co/V2Dzn15/download-removebg-preview.png" alt="" />
                     </div>
                     <div className="footer-flex">
                         <p><u>Popular Recipe</u></p>

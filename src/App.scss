@@ -409,7 +409,11 @@ p {
     flex: 1 0 25%; /* Displays four columns on desktop */
     margin-bottom: 20px;
     line-height: 30px;
-  
+
+    @media (max-width: 1024px) {
+      flex-basis: 50%; /* Displays two columns on tablets */
+    }
+    
     @media (max-width: 768px) {
       flex-basis: 100%; /* Displays one column on mobile */
     }
