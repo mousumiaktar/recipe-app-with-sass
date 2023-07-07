@@ -400,12 +400,13 @@ p {
 }
 .footer-body{
   display: flex;
+  flex-flow: wrap;
   justify-content: space-between;
-  justify-items: center;
   padding-top: 15px;
 
-  .footer-content img{
+  .footer-flex img{
     height: 100px;
+    background-color: hsl(151, 74%, 45%);
   }
 }
 
